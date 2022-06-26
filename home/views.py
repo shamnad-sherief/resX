@@ -11,4 +11,9 @@ def login(request):
 def about(request):
     return render(request,'about.html')
 
+def materials(request):
+    return render(request,'materials.html')
+
+def contact(request):
+    return render(request,'contact.html')
 
