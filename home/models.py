@@ -7,8 +7,7 @@ class Department(models.Model):
     department_code = models.CharField(max_length=100)
     department_name = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.department_id
+
 
 
 class Faculty(models.Model):
@@ -17,8 +16,14 @@ class Faculty(models.Model):
     faculty_type = models.CharField(max_length=100)
     department_id = models.CharField(max_length=20)
 
-    def __str__(self):
-        return self.faculty_id
+class Materials(models.Model):
+    material_name = models.CharField(max_length=3000)
+    material_sem = models.IntegerField()
+    material_batch = models.CharField(max_length=20)
+    material_subject = models.CharField(max_length=20)
+    material_type = models.CharField(max_length=20)
+
+
 
 
 class Student(models.Model):
@@ -28,6 +33,5 @@ class Student(models.Model):
     faculty_type = models.CharField(max_length=100)
     department_id = models.CharField(max_length=20)
 
-    def __str__(self):
-        return self.student_id
+
 
